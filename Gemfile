@@ -13,10 +13,10 @@ end
 
 gem 'jquery-rails'
 gem 'pry'
-
 gem 'fog'
 gem 'haml'
 
 gem 'refinerycms', '~> 2.0.0'
+gem 'refinerycms-page-images', '~> 2.0.0'
 
 
