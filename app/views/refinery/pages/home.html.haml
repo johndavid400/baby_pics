@@ -1,0 +1,5 @@
+%h2= @page.title
+- @page.parts.each do |part|
+  .content
+    = part.body.html_safe
+
