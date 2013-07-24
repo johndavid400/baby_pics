@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'pry'
 
 gem 'fog'
+gem 'haml'
 
 gem 'refinerycms', '~> 2.0.0'
 
