@@ -1,0 +1,7 @@
+- @page.parts.each do |part|
+  .content
+    = part.body.html_safe
+%ul.large-block-grid-4
+  - @page.images.each do |image|
+    %li= link_to image_tag(image.thumbnail("320x240!").url, :class => "imgshadow"), image.url
+

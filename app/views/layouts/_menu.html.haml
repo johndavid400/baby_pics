@@ -13,6 +13,10 @@
             %a{:class => "active", :href => root_path}
               %span{:style => "font-size: 1.2em;"} Merrilee Honey Warren
         %ul.right
+          %li
+            %a{:href => refinery.upload_image_path}
+              Upload
+        %ul.right
           - Refinery::Page.where("parent_id IS NULL").each do |page|
             %li
               %a{:class => "active", :href => refinery.page_path(page)}
