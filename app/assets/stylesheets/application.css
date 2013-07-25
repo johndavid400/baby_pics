@@ -19,14 +19,14 @@ body {
 }
 
 .page-content {
-  margin: 30px 0px;
+  margin: 0px 0px 30px 0px;
   background-color: #fff;
   padding: 1em;
   box-shadow: 1px 1px 8px 1px #666;
 }
 
 .content {
-  margin: 30px 0px;
+  margin: 0px 0px 30px 0px;
   background-color: #fff;
   padding: 1em;
 }
@@ -38,3 +38,6 @@ body {
   box-shadow:0px 0px 7px #A7A7A7;
 }
 
+.top-bar{
+  color: white;
+}

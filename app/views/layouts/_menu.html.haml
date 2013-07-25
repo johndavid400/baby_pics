@@ -1,0 +1,19 @@
+.row
+  .large-12.columns
+    .top-bar
+      %ul.title-area
+        %li.toggle-topbar.menu-icon
+          %a
+            %span
+              Menu
+        %li.name
+      %section.top-bar-section
+        %ul.left
+          %li
+            %a{:class => "active", :href => root_path}
+              %span{:style => "font-size: 1.2em;"} Merrilee Honey Warren
+        %ul.right
+          - Refinery::Page.where("parent_id IS NULL").each do |page|
+            %li
+              %a{:class => "active", :href => refinery.page_path(page)}
+                = page.title

@@ -3,5 +3,5 @@
     = part.body.html_safe
 %ul.large-block-grid-4
   - @page.images.each do |image|
-    %li= link_to image_tag(image.thumbnail("200x200#c").url, :class => "imgshadow"), image.thumbnail("900x600").url
+    %li= link_to image_tag(image.thumbnail("300x300#c").url, :class => "imgshadow"), image.url
 
