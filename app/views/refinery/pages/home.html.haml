@@ -2,15 +2,8 @@
   .content
     = part.body.html_safe
 
-.small-10.large-centered.columns
-  .slider
-    %ul{"data-options" => "timer_speed: 4000; bullets: false;", "data-orbit" => ""}
-      - Refinery::Image.all.last(10).each do |image|
-        %li
-          .slider-content
-            = link_to image_tag(image.thumbnail("1024x768#c").url), image.url
-
-%ul.large-block-grid-6
+.row
   - Refinery::Image.all.each do |image|
-    %li= link_to image_tag(image.thumbnail("320x240#c").url, :class => "imgshadow"), image.url
+    .large-2.small-12.columns
+      = link_to image_tag(image.thumbnail_image, :class => "imgshadow"), image.url
 
