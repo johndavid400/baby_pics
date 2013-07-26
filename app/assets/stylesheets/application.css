@@ -41,3 +41,21 @@ body {
   color: white;
 }
 
+.orbit-container {
+  border: solid 8px #fff;
+  box-shadow: 0 1px 8px #ccc;
+}
+
+.orbit-container .orbit-slides-container > * {
+  position: relative;
+  float: left;
+  height: auto !important;
+}
+
+.orbit-bullets {
+  display: none;
+}
+
+.orbit-container .orbit-slides-container img {
+  width: 100%;
+}

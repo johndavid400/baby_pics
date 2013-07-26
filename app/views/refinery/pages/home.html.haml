@@ -3,7 +3,24 @@
     = part.body.html_safe
 
 .row
+  .large-12.columns
+    .rotator-container.carousel
+      %ul{"data-options" => "timer_speed: 4000;", "data-orbit" => ""}
+        - Refinery::Image.all.each do |image|
+          %li
+            .slider-content
+              %center
+                = link_to image_tag(image.large_image), image.url
+%p
+
+.row.show-for-small
+  .large-12.columns
+    %center
+      %i Slide finger across image
+%p
+
+.row
   - Refinery::Image.all.each do |image|
-    .large-2.small-12.columns
+    .large-2.small-6.columns
       = link_to image_tag(image.thumbnail_image, :class => "imgshadow"), image.large_image, :rel => "lightbox[gallery]"
 
