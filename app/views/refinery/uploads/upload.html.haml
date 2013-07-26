@@ -6,7 +6,7 @@
     = form_for @image, :url => (refinery.create_image_path), :html => { :multipart => true } do |f|
       = f.file_field :image
       %p
-      = f.submit
+      = f.submit "Save", :class => "button"
 
   .large-12.columns
     - if @uploaded_image
