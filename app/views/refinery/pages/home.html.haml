@@ -6,7 +6,7 @@
   .large-12.columns
     .rotator-container.carousel
       %ul{"data-options" => "timer_speed: 4000;", "data-orbit" => ""}
-        - Refinery::Image.all.each do |image|
+        - Refinery::Image.all.reverse.each do |image|
           %li
             .slider-content
               %center
