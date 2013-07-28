@@ -1,0 +1,7 @@
+.rotator-container
+  %ul{"data-options" => "timer_speed: 4000;", "data-orbit" => ""}
+    - @images.each do |image|
+      %li
+        .slider-content
+          %center
+            = link_to image_tag(image.large_image), image.url

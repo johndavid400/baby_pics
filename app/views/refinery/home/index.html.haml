@@ -1,0 +1,34 @@
+- @page.parts.each do |part|
+  .content
+    = part.body.html_safe
+
+.row
+  .small-6.large-10.columns
+    .digg_pagination
+      = will_paginate @images
+  .small-6.large-2.columns
+    = form_tag root_path do
+      = select_tag 'per_page', options_for_select(@per_page_options), {:prompt => "Per Page: #{session[:per_page]}"}
+
+.row
+  .large-12.columns
+    #carousel
+      = render 'carousel_images'
+
+.row.show-for-small
+  .large-12.columns
+    %center
+      %i Slide finger across image
+%p
+
+.row
+  #image_grid
+    = render 'grid_images'
+%p
+
+- content_for :javascripts do
+  :javascript
+    $("#per_page").change(function(event) {
+      this.form.submit();
+    });
+
