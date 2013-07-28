@@ -5,7 +5,7 @@ module Refinery
       @page = Refinery::Page.find_by_title("Home")
       @per_page_options = ["6", "12", "18", "24", "All"]
       unless session[:per_page].present?
-        session[:per_page] = 12
+        session[:per_page] = 6
       end
       if params[:per_page].present?
         set_per_page
